@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaFX WebView Demo</title>
+</head>
+<body>
+<h4>功能测试</h4>
+<button onclick="getData()">获取数据</button>
+<button onclick="controller.open()">新开窗口</button>
+<button onclick="controller.exit()">退出程序</button>
+<div id="data"></div>
+<script>
+    function getData(){
+        try{
+            document.querySelector('#data').innerText += controller.getData();
+        }catch (e){
+            document.querySelector('#data').innerText += e;
+        }
+    }
+</script>
+</body>
+</html>
